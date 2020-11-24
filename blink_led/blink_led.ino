@@ -8,7 +8,7 @@ void loop() {
   delay(2000);
   for (int i = 0; i <= 3; i++) {
     digitalWrite(ONBOARD_LED,HIGH);
-    delay(100);
+    delay(50);
     digitalWrite(ONBOARD_LED,LOW);
     delay(100);
   }

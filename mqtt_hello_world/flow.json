@@ -1,0 +1,105 @@
+[
+    {
+        "id": "4a6d7d37.2a33d4",
+        "type": "tab",
+        "label": "mqtt_hello_world",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2028e23f.0a6aae",
+        "type": "debug",
+        "z": "4a6d7d37.2a33d4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d9e2f7b5.dc3568",
+        "type": "inject",
+        "z": "4a6d7d37.2a33d4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hello from node red!",
+        "payloadType": "str",
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "89fb9571.02a4c8"
+            ]
+        ]
+    },
+    {
+        "id": "c495b8f6.85d8d8",
+        "type": "mqtt in",
+        "z": "4a6d7d37.2a33d4",
+        "name": "",
+        "topic": "YourTopic",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "8d4316aa.457858",
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "2028e23f.0a6aae"
+            ]
+        ]
+    },
+    {
+        "id": "89fb9571.02a4c8",
+        "type": "mqtt out",
+        "z": "4a6d7d37.2a33d4",
+        "name": "",
+        "topic": "YourTopic",
+        "qos": "",
+        "retain": "",
+        "broker": "8d4316aa.457858",
+        "x": 680,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8d4316aa.457858",
+        "type": "mqtt-broker",
+        "name": "Broker",
+        "broker": "YourMQTTbrokerIP",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
